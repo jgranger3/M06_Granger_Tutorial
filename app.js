@@ -36,6 +36,16 @@ app.get('/add-blog', (req, res) => {
             console.log(err);
         });
 
+});
+
+app.get('/all-blogs', (req, res) => {
+    Blog.find()
+        .then((result) => {
+            res.send(result);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
 })
 
 //routes
