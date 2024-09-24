@@ -6,7 +6,7 @@ const Blog = require('./models/blog');
 //express app
 const app = express();
 
-const dbURI = 'mongodb+srv://jgranger3:SDEV255@nodes-tutorial.w4fan.mongodb.net/?retryWrites=true&w=majority&appName=Nodes-Tutorial';
+const dbURI = 'mongodb+srv://jgranger3:SDEV255@nodes-tutorial.w4fan.mongodb.net/';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true})
     .then((result) => app.listen(3000))
     .catch((err) => console.log(err));
